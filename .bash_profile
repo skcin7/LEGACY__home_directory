@@ -9,9 +9,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # Aliases:
 #
 alias ll='ls -lash'
-# Make a new directory and immediately go into it.
-# https://stackoverflow.com/a/42466441/721361
-alias mkcd='f(){ mkdir "$1"; cd "$1"; unset -f f; }; f'
+alias mkcd='f(){ mkdir "$1"; cd "$1"; unset -f f; }; f' # Create a directory and then immediately go into it. https://stackoverflow.com/a/42466441/721361
 alias rmf='rm -rf' # Remove a directory with recursive force.
 
 #
