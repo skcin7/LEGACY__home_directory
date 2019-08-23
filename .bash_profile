@@ -9,8 +9,13 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # Aliases:
 #
 alias ll='ls -lash'
-alias mkcd='f(){ mkdir "$1"; cd "$1"; unset -f f; }; f' # Create a directory and then quickly go into it. https://stackoverflow.com/a/42466441/721361
+alias mkcd='f(){ mkdir "$1"; cd "$1"; unset -f f; }; f' # Create a directory and then quickly go into it. # https://stackoverflow.com/a/42466441/721361
 alias rmf='rm -rf' # Remove a directory with recursive force.
+alias https='f(){ http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key; unset -f f; }; f' # Create local https server. # https://medium.com/@jonsamp/how-to-set-up-https-on-localhost-for-macos-b597bcf935ee
+#function https-server() {
+#	http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
+#}
+
 
 #
 # Exports:
@@ -29,10 +34,6 @@ export PATH="./vendor/bin:$PATH"
 
 
 
-# https://medium.com/@jonsamp/how-to-set-up-https-on-localhost-for-macos-b597bcf935ee
-function https-server() {
-	http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
-}
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
